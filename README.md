@@ -9,7 +9,7 @@ pip install -r requirements.txt
 python app.py [url-to-auditory-cortex]
 ```
 
-*So far I haven't been able to bind the host's microphone to the docker container, therefore can't offer this as a Docker image, if anyone has any clues on how to do this, I'd be most grateful if you sent a PR.*
+*So far I haven't been able to bind the host's microphone to the docker container, I therefore can't offer this as a Docker image, if anyone has any clues on how to do this, I'd be most grateful if you sent a PR.*
 
 ## Additional Dependencies
 
