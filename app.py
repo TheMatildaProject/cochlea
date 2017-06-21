@@ -13,8 +13,13 @@ with sr.Microphone() as source:
         audio = r.listen(source)
         b64 = base64.b64encode(audio.get_wav_data())
         
-        payload = {"audio": "{0}".format(b64.decode())} # byte to string as json is prep
-        
+        payload = {
+            "action": "command",
+            "parameters": {
+                "audio": "{0}".format(b64.decode())
+            }
+        } # byte to string as json is prep
+
         rq = requests.post(sys.argv[1], json=payload);
         
-        print (rq);
+        print('I heard something!')
